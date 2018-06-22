@@ -8,13 +8,9 @@ from .models import Question
 
 # Create your tests here.
 
-<<<<<<< HEAD
 
 class QuestionModelTests(TestCase):
 
-=======
-class QuestionModelTests(TestCase):
->>>>>>> c64a262a9faa285bb3f46d7a382e4bed13185126
     def test_was_published_recently_with_future_question(self):
         """
         was_published_recently() returns False for questions whose pub_date
@@ -24,10 +20,10 @@ class QuestionModelTests(TestCase):
         future_question = Question(pub_date=time)
         self.assertIs(future_question.was_published_recently(), False)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c64a262a9faa285bb3f46d7a382e4bed13185126
+
+
+
     def test_was_published_recently_with_old_question(self):
         """
         was_published_recently() returns False for questions whose pub_date
@@ -53,12 +49,9 @@ def create_question(question_text, days):
     in the past, positive for questions that have yet to be published).
     """
     time = timezone.now() + datetime.timedelta(days=days)
-<<<<<<< HEAD
-    return Question.objects.create(Question_text=question_text, pub_date=time)
-=======
-    return Question.objects.create(question_text=question_text, pub_date=time)
 
->>>>>>> c64a262a9faa285bb3f46d7a382e4bed13185126
+    return Question.objects.create(Question_text=question_text, pub_date=time)
+
 
 class QuestionIndexViewTests(TestCase):
     def test_no_questions(self):

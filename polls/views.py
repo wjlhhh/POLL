@@ -10,6 +10,7 @@ from django.utils import timezone
 # Create your views here
 
 """
+#shitu
 def index(request):
     #latest_question_list = Question.objects.order_by('-pub_date')
     latest_question_list = Question.objects.all()
